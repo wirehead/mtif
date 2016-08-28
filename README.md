@@ -1,7 +1,12 @@
 # Movable Type Import Format parser
 
+[![Build Status](https://travis-ci.org/wirehead/mtif.svg?branch=master)](https://travis-ci.org/wirehead/mtif)
+
+A very rough parser for the Movable Type Import Format (MTIF).
+
 ## Example usage
 
+See [example.js](example.js)
 
 ## Contributing
 
