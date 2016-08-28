@@ -3,3 +3,12 @@ node_js:
 - '4'
 - '5'
 script: npm run travis
+deploy:
+  provider: npm
+  email: wh-npm@wirewd.com
+  api_key:
+    secure: 2p3POpqJwySQyc/73+N+bYM9lZVV3EpRU3gCgMm3TYYzrztEqNsOv8RMTqzF/DdkYoH/8jybRvfk7hk1Uqz65IpYSVddGeXJTVem0pgm1DYmLH3O6714bizUTPECdDe7cuBiHECBRDv+12hHoGFZ/eRoMuZ2Be0VBxLEPCuwgmS6yPNlP4NFpNQFhHNX7/HP5hpkCsSuEBKHBb9srXGOqjdRPa5l0lz1Op/qbVaI6bOQwxNAGZAF5UPOB7GbOTryMLccJ2YRcXyPV7TaGLHrQ8z+HHfdcuT2BwZ5spYf/0SnGNYq2J0PFtTd65HYVDEKx03x5gh6DrQ4142YxDgtxYbOQ2xag2Cu6eYlq2dSxbz++o2qs7WWW+iXHjW30gOUtRU8fRzamNmrUJjLkRdmKy6jhJQBXgtLjOk7hO5bletekOgmvWw6uqoCBTM60TYDeYftGhvUo3On9GGkCjpwe1sl97LqGJov8kAPf7rSpjuP82dMs5dccfG2J/7yaiFECEPaXwQvbcaxwX8pm/spnVHI6m6bxfMrWVpaPsIc2/m4rntUNGzbJrqnQ1E/bf2b0wzyLB+ng7Lw4oVfKKYPQh3ebEphbb+QgZxMjAvqv+junJ2ad4W+BtW1DKDAhx1aUB4FB8YMqbi53RblEHJof0/RTYsD8EQ1pa66TVGXW1w=
+  on:
+    tags: true
+    repo: wirehead/mtif
+    node: '4'
