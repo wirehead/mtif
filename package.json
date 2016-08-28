@@ -4,8 +4,31 @@
   "description": "A Movable Type Import Format parser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha tests/*.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha tests/*.js",
+    "travis": "npm run lint && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha tests/*.js --report lcovonly && codecov",
+    "lint": "./node_modules/.bin/eslint index.js tests benchmark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wirehead/mtif.git"
   },
   "author": "Wirehead <wh-npm@wirewd.com>",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "engines": {
+    "node": "4.x || 5.x",
+    "npm": "2.x || 3.x"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "eslint": "^3.4.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
+    "eslint-plugin-node": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "line-by-line": "^0.1.5"
+  }
 }
