@@ -7,9 +7,9 @@ function parseMtifDate(date) {
   var dateBits = date.match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2}):(\d{2}) ?(AM|PM)?/);
   var hour = dateBits[4];
   if (dateBits[7] === 'PM') {
-    hour = parseInt(hour) + 12;
+    hour = parseInt(hour, 10) + 12;
   }
-  return new Date(dateBits[3], dateBits[1]-1, dateBits[2], hour, dateBits[5], dateBits[6]);
+  return new Date(dateBits[3], dateBits[1] - 1, dateBits[2], hour, dateBits[5], dateBits[6]);
 }
 
 function BreakIntoEntries(stream) {
@@ -24,7 +24,7 @@ function BreakIntoEntries(stream) {
       entry = '';
     } else {
       entry = entry + line + '\n';
-    }    
+    }
   });
   stream.on('end', function() {
     ee.emit('end');
@@ -42,9 +42,9 @@ function BreakIntoSections(stream) {
     var sections = section.split('-----');
     sections.forEach(function(value, index, array) {
       if (value !== '\n') {
-        ee.emit('section', value)
+        ee.emit('section', value);
       }
-    })
+    });
     ee.emit('entryEnd');
   });
   stream.on('end', function() {
@@ -61,24 +61,24 @@ function ParseMultiLine(stream) {
   });
   stream.on('section', function(section) {
     if (section.match(/^BODY:\n/mi)) {
-      return ee.emit('body', section.replace(/^BODY:\n/mi,''))
+      return ee.emit('body', section.replace(/^BODY:\n/mi,''));
     }
     if (section.match(/^EXCERPT:\n/mi)) {
-      return ee.emit('excerpt', section.replace(/^EXCERPT:\n/mi,''))
+      return ee.emit('excerpt', section.replace(/^EXCERPT:\n/mi,''));
     }
     if (section.match(/^COMMENT:\n/mi)) {
-      return ee.emit('comment', section.replace(/^COMMENT:\n/mi,''))
+      return ee.emit('comment', section.replace(/^COMMENT:\n/mi,''));
     }
     if (section.match(/^PING:\n/mi)) {
-      return ee.emit('ping', section.replace(/^PING:\n/mi,''))
+      return ee.emit('ping', section.replace(/^PING:\n/mi,''));
     }
     if (section.match(/^EXTENDED BODY:\n/mi)) {
-      return ee.emit('extendedBody', section.replace(/^EXTENDED BODY:\n/mi,''))
+      return ee.emit('extendedBody', section.replace(/^EXTENDED BODY:\n/mi,''));
     }
     if (section.match(/^KEYWORDS:\n/mi)) {
-      return ee.emit('keywords', section.replace(/^KEYWORDS:\n/mi,''))
+      return ee.emit('keywords', section.replace(/^KEYWORDS:\n/mi,''));
     }
-    ee.emit('section',section)
+    ee.emit('section',section);
   });
   stream.on('entryEnd', function() {
     ee.emit('entryEnd');
@@ -219,9 +219,9 @@ function ParseSingleLine(stream) {
         data.category.push(line[1]);
       }
       if (line[0] === 'TAGS') {
-        data.tags = line[1].split(',')
+        data.tags = line[1].split(',');
       }
-    })
+    });
     ee.emit('data', data);
   });
   stream.on('end', function() {
@@ -288,7 +288,7 @@ function ParseEntries(stream) {
 }
 
 module.exports = exports = function(path) {
-  lr = new LineByLineReader(path);
+  var lr = new LineByLineReader(path);
   var stream = ParseEntries(ParseSingleLine(ParseMultiLine(BreakIntoSections(BreakIntoEntries(lr)))));
   return stream;
-}
+};

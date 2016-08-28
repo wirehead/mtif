@@ -5,5 +5,4 @@ describe('textblock', function() {
 
   it('should have test', function() {
   });
-
 });
