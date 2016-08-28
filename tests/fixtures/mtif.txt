@@ -1,0 +1,134 @@
+TITLE: A dummy title
+BASENAME: a-dummy-title
+AUTHOR: Foo Bar
+DATE: 01/31/2002 03:31:05 PM
+PRIMARY CATEGORY: Media
+CATEGORY: News
+-----
+BODY:
+This is the body.
+
+Another paragraph here.
+
+Another paragraph here.
+-----
+EXTENDED BODY:
+Here is some more text.
+
+Another paragraph here.
+
+Another paragraph here.
+-----
+COMMENT:
+AUTHOR: Foo
+DATE: 01/31/2002 15:47:06
+This is
+the body of this comment.
+-----
+COMMENT:
+AUTHOR: Bar
+DATE: 02/01/2002 04:02:07 AM
+IP: 205.66.1.32
+EMAIL: me@bar.com
+This is the body of
+another comment. It goes
+up to here.
+-----
+PING:
+TITLE: My Entry
+URL: http://www.foo.com/old/2002/08/
+IP: 206.22.1.53
+BLOG NAME: My Weblog
+DATE: 08/05/2002 16:09:12
+This is the start of my
+entry, and here it...
+-----
+--------
+TITLE: Here is a new entry
+BASENAME: here-is-a-new-entry
+AUTHOR: Baz Quux
+DATE: 01/31/2002 03:31:05
+CATEGORY: Politics
+-----
+BODY:
+This is the body of the second entry. It can
+consist of multiple lines.
+-----
+EXCERPT:
+See, this entry does not have an extended piece; but
+it does have an excerpt. It is special.
+-----
+COMMENT:
+AUTHOR: Quux
+URL: http://www.quux.com/
+DATE: 01/31/2002 04:23:01 PM
+Here is the first comment on this entry.
+-----
+--------
+AUTHOR: Wirehead
+AUTHOR EMAIL: nobody@wirewd.com
+TITLE: Title?
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: wysiwyg
+ALLOW PINGS: 0
+BASENAME: call-me
+
+UNIQUE URL: http://example.com
+DATE: 03/18/2008 11:29:27 AM
+-----
+BODY:
+<p>After getting sick and having my car broken into, the new hard drive for my new system decided to die after a few days.</p><p>This is getting really old.</p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+geek, models, hard drive
+-----
+--------
+AUTHOR: Wirehead
+AUTHOR EMAIL: wh-typepad@wirewd.com
+TITLE: QotD: Daylight Saving Time
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: wysiwyg
+ALLOW PINGS: 0
+BASENAME: qotd-daylight-saving-time
+
+UNIQUE URL: http://wirehead.typepad.com/blog/2008/03/qotd-daylight-saving-time.html 
+DATE: 03/10/2008 09:20:23 AM
+-----
+BODY:
+<blockquote><p>Love it or hate it, many of you lost an hour of sleep last night due to Daylight Saving Time? Worth It? Do you like it more/less now that Daylight Saving Time occurs earlier (and later) in the year? </p></blockquote><p>
+Daylight Savings Time is ass.</p><p>You can creep around the hollers of Virginia and get a bottle of Moonshine.&#0160; But you can&#39;t bottle up sunshine.&#0160; We&#39;re not &quot;saving&quot; anything.</p><p>Dumbest idea ever.&#0160; Especially because every DST it will effect me and the software I write.<br /></p>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+qotd, dst
+-----
+COMMENT:
+AUTHOR: reesie
+EMAIL: 
+IP: 
+URL: 
+DATE: 03/11/2008 11:32:24 PM
+DST is retarded..............<br/><br/>It ruins my early morning wakeup, and it makes me go around changing all my clocks to match this stupid time change. UGH!!!!!!!<br/> 
+-----
+COMMENT:
+AUTHOR: wirehead
+EMAIL: 
+IP: 
+URL: 
+DATE: 03/12/2008 09:46:49 AM
+Right.<br/><br/>Now, try writing software that's intended to work all over the world where each country has slightly different rules for when DST is supposed to hit and where you can't necessarily trust the user to have set up the time zone on their machine properly.&#xA0; And, as we found out recently, it's not a physical law, so governments feel like tinkering with it.<br/><br/>Thankfully, I knew that governments have a habit of changing DST, so I coded for that case.&#xA0; Not everybody else does.&#xA0; <br/> 
+-----
+--------
